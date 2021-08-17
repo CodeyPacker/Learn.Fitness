@@ -1,0 +1,16 @@
+<svg id="Bits_Icons_Sm_HamburgerMenu" data-name="Bits/Icons/Sm/HamburgerMenu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="46" viewBox="0 0 46 46">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M1.533,18.4a1.533,1.533,0,0,1,0-3.066H23A1.533,1.533,0,1,1,23,18.4Zm0-7.666a1.533,1.533,0,1,1,0-3.066H23a1.533,1.533,0,1,1,0,3.066Zm0-7.667A1.533,1.533,0,0,1,1.533,0H23a1.533,1.533,0,1,1,0,3.066Z" fill="#979797"/>
+    </clipPath>
+  </defs>
+  <rect id="BoundingBox" width="46" height="46" fill="none"/>
+  <g id="Group_24" data-name="Group 24" transform="translate(10.733 13.8)">
+    <path id="Combined_Shape-2" data-name="Combined Shape" d="M1.533,18.4a1.533,1.533,0,0,1,0-3.066H23A1.533,1.533,0,1,1,23,18.4Zm0-7.666a1.533,1.533,0,1,1,0-3.066H23a1.533,1.533,0,1,1,0,3.066Zm0-7.667A1.533,1.533,0,0,1,1.533,0H23a1.533,1.533,0,1,1,0,3.066Z" fill="#979797"/>
+    <g id="Mask_Group_33" data-name="Mask Group 33" clip-path="url(#clip-path)">
+      <g id="Icon-Color" transform="translate(-10.733 -13.8)">
+        <rect id="Swatch-ElectricPurple" width="46" height="46" fill="#5d2ae5"/>
+      </g>
+    </g>
+  </g>
+</svg>
