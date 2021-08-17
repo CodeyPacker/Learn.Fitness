@@ -11,7 +11,7 @@ import theme from "../../../theme";
 
 const MobileNav = () => {
   const [navOpen, setNavOpen] = useState(false);
-  console.log(theme.breakpoints.desktopMin);
+
   return (
     <div>
       <div className="mobile-nav-container">
