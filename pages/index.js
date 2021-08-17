@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import Header from "../src/components/header/Header";
+import yellowBlobMobile from "../public/header/yellow-blob-mobile.svg";
 import yellowBlob from "../public/header/yellow-blob.svg";
 import theme from "../theme";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Learn Fitness</title>
         <meta
@@ -15,12 +15,8 @@ export default function Home() {
           content="Fitness information for all levels of experience"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
-          rel="stylesheet"
-        />
       </Head>
-      <main className={`${styles.mainContent}`}>
+      <main className="main-content">
         <Header />
       </main>
 
@@ -56,6 +52,35 @@ export default function Home() {
 
         .nav-items li {
           margin-left: ${theme.spacing.small};
+        }
+
+        .main-content {
+          padding: 10px 15px;
+          min-height: 100vh;
+          width: 100vw;
+          background-image: url(${yellowBlobMobile.src});
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: -84px -164px;
+        }
+
+        @media only screen and (min-width: ${theme.breakpoints.tabletMin}) {
+          .main-content {
+            background-image: url(${yellowBlob.src});
+            background-position: -222px -278px;
+          }
+        }
+
+        @media only screen and (min-width: ${theme.breakpoints.desktopMin}) {
+          .main-content {
+            background-position: -222px -278px;
+          }
+        }
+
+        @media only screen and (min-width: ${theme.breakpoints.desktopMax}) {
+          .main-content {
+            background-position: 10px -333px;
+          }
         }
 
         @media only screen and (max-width: ${theme.breakpoints.desktopMin}) {

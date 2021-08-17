@@ -23,6 +23,7 @@ const theme = {
     white: "#ffffff",
   },
   breakpoints: {
+    desktopMax: `${desktopMax}px`,
     desktopMin: `${desktopMin}px`,
     mobileMax: `${mobileMax}px`,
     mobileMin: `${mobileMin}px`,
