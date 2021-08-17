@@ -81,7 +81,7 @@ const MobileNav = () => {
           padding-bottom: 30px;
           flex-direction: column;
           justify-content: center;
-          transition: transform 0.5s;
+          transition: transform 0.4s;
           transform: translateX(110%);
           color: ${theme.colors.white};
           background-color: ${theme.colors.purple};
@@ -106,7 +106,7 @@ const MobileNav = () => {
         }
 
         .close-nav.open {
-          animation-delay: 0.3s;
+          animation-delay: 0.22s;
           animation-name: rollIn;
           animation-duration: 0.6s;
           animation-fill-mode: forwards;
