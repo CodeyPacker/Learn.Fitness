@@ -66,7 +66,6 @@ const MobileNav = () => {
           height: 100vh;
           position: absolute;
           background-color: black;
-          transition: opacity 0.3s;
         }
 
         .mobile-nav {
@@ -82,10 +81,11 @@ const MobileNav = () => {
           padding-bottom: 30px;
           flex-direction: column;
           justify-content: center;
-          transition: transform 0.3s;
-          transform: translateX(100%);
+          transition: transform 0.5s;
+          transform: translateX(110%);
           color: ${theme.colors.white};
           background-color: ${theme.colors.purple};
+          box-shadow: -8px -1px 15px -3px rgba(0, 0, 0, 0.2);
         }
 
         .mobile-nav.open {
