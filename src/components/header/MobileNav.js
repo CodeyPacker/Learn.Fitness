@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import nav from "../../../public/header/nav.svg";
 import closeNav from "../../../public/header/close-nav.svg";
@@ -11,6 +11,20 @@ import theme from "../../../theme";
 
 const MobileNav = () => {
   const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    const escFunction = (event) => {
+      if (event.keyCode === 27 && navOpen) {
+        setNavOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", escFunction);
+
+    return () => {
+      document.removeEventListener("keydown", escFunction);
+    };
+  }, [navOpen]);
 
   return (
     <div>
@@ -80,6 +94,7 @@ const MobileNav = () => {
           padding-right: 40px;
           padding-bottom: 30px;
           flex-direction: column;
+          visibility: hidden;
           transition: transform 0.4s;
           transform: translateX(110%);
           color: ${theme.colors.white};
@@ -88,6 +103,7 @@ const MobileNav = () => {
         }
 
         .mobile-nav.open {
+          visibility: visible;
           transform: unset;
         }
 
@@ -100,6 +116,7 @@ const MobileNav = () => {
           display: block;
           cursor: pointer;
           overflow: hidden;
+          visibility: hidden;
           position: absolute;
           transition: transform 0.3s;
           transform: translateX(100%);
@@ -168,6 +185,7 @@ const MobileNav = () => {
           }
 
           to {
+            visibility: visible;
             transform: translateX(0%) rotate(-180deg);
           }
         }

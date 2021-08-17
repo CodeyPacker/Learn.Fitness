@@ -2,6 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Header from "../src/components/header/Header";
+import yellowBlob from "../public/header/yellow-blob.svg";
+import theme from "../theme";
 
 export default function Home() {
   return (
@@ -34,6 +36,34 @@ export default function Home() {
           </span>
         </a>
       </footer> */}
+
+      <style jsx>{`
+        header {
+          justify-content: space-between;
+          display: flex;
+        }
+
+        .nav {
+          cursor: pointer;
+          background: 0;
+          border: 0;
+        }
+
+        .nav-items {
+          display: flex;
+          list-style-type: none;
+        }
+
+        .nav-items li {
+          margin-left: ${theme.spacing.small};
+        }
+
+        @media only screen and (max-width: ${theme.breakpoints.desktopMin}) {
+          .desktop-nav {
+            display: none;
+          }
+        }
+      `}</style>
     </div>
   );
 }
