@@ -38,7 +38,7 @@ const MobileNav = () => {
         >
           <Image src={closeNav} alt="close navigation menu" />
         </button>
-        <div className={`mobile-nav ${navOpen ? "open" : ""}`}>
+        <div className={`mobile-nav ${navOpen ? "open" : "closed"}`}>
           <nav>
             <ul>
               <li className="about">
@@ -94,7 +94,6 @@ const MobileNav = () => {
           padding-right: 40px;
           padding-bottom: 30px;
           flex-direction: column;
-          visibility: hidden;
           transition: transform 0.4s;
           transform: translateX(110%);
           color: ${theme.colors.white};
@@ -105,6 +104,13 @@ const MobileNav = () => {
         .mobile-nav.open {
           visibility: visible;
           transform: unset;
+        }
+
+        .mobile-nav.closed {
+          animation-delay: 0.22s;
+          animation-name: delayInvisibility;
+          animation-duration: 0.6s;
+          animation-fill-mode: forwards;
         }
 
         .close-nav {
@@ -187,6 +193,16 @@ const MobileNav = () => {
           to {
             visibility: visible;
             transform: translateX(0%) rotate(-180deg);
+          }
+        }
+
+        @keyframes delayInvisibility {
+          from {
+            visibility: visible;
+          }
+
+          to {
+            visibility: hidden;
           }
         }
       `}</style>
