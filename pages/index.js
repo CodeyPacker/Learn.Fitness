@@ -13,6 +13,10 @@ export default function Home() {
           content="Fitness information for all levels of experience"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <main className={`${styles.mainContent}`}>
         <Header />

@@ -75,12 +75,11 @@ const MobileNav = () => {
           z-index: 2;
           height: 100vh;
           display: flex;
-          padding-top: 30px;
+          padding-top: 80px;
           position: absolute;
           padding-right: 40px;
           padding-bottom: 30px;
           flex-direction: column;
-          justify-content: center;
           transition: transform 0.4s;
           transform: translateX(110%);
           color: ${theme.colors.white};
@@ -100,9 +99,10 @@ const MobileNav = () => {
           background: 0;
           display: block;
           cursor: pointer;
+          overflow: hidden;
           position: absolute;
-          transform: translateX(100%);
           transition: transform 0.3s;
+          transform: translateX(100%);
         }
 
         .close-nav.open {
@@ -156,7 +156,7 @@ const MobileNav = () => {
           }
         }
 
-        @media only screen and (min-width: 1024px) {
+        @media only screen and (min-width: ${theme.breakpoints.desktopMin}) {
           .mobile-nav-container {
             display: none;
           }
