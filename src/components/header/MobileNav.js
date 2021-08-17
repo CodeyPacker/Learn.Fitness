@@ -11,67 +11,143 @@ import theme from "../../../theme";
 
 const MobileNav = () => {
   const [navOpen, setNavOpen] = useState(false);
-
+  console.log(theme.breakpoints.desktopMin);
   return (
     <div>
-      <button className="hamburger" onClick={() => setNavOpen(true)}>
-        <Image src={nav} alt="open navigation menu" />
-      </button>
-      <button
-        className={`close-nav ${navOpen ? "open" : ""}`}
-        onClick={() => setNavOpen(false)}
-      >
-        <Image src={closeNav} alt="close navigation menu" />
-      </button>
-      <div className={`mobile-nav ${navOpen ? "open" : ""}`}>
-        <nav>
-          <ul>
-            <li className="about">
-              <a href="#">About</a>
-            </li>
-            <li className="guides">
-              <a href="#">Guides</a>
-            </li>
-            <li className="faq">
-              <a href="#">FAQ</a>
-            </li>
-            <li className="shop">
-              <a href="#">Shop</a>
-            </li>
-            <li className="contact">
-              <a href="#">Contact Us</a>
-            </li>
-          </ul>
-        </nav>
+      <div className="mobile-nav-container">
+        <button className="hamburger" onClick={() => setNavOpen(true)}>
+          <Image src={nav} alt="open navigation menu" />
+        </button>
+        <button
+          className={`close-nav ${navOpen ? "open" : ""}`}
+          onClick={() => setNavOpen(false)}
+        >
+          <Image src={closeNav} alt="close navigation menu" />
+        </button>
+        <div className={`mobile-nav ${navOpen ? "open" : ""}`}>
+          <nav>
+            <ul>
+              <li className="about">
+                <a href="#">About</a>
+              </li>
+              <li className="guides">
+                <a href="#">Guides</a>
+              </li>
+              <li className="faq">
+                <a href="#">FAQ</a>
+              </li>
+              <li className="shop">
+                <a href="#">Shop</a>
+              </li>
+              <li className="contact">
+                <a href="#">Contact Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
+      {navOpen && (
+        <div className={`nav-backdrop`} onClick={() => setNavOpen(false)} />
+      )}
       <style jsx>{`
-        header {
-          justify-content: space-between;
-          display: flex;
+        .hamburger {
+          border: 0;
+          background: 0;
+          cursor: pointer;
         }
 
-        .hamburger {
-          cursor: pointer;
-          background: 0;
-          border: 0;
+        .nav-backdrop {
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          opacity: 0.8;
+          height: 100vh;
+          position: absolute;
+          background-color: black;
+          transition: opacity 0.3s;
         }
 
         .mobile-nav {
-          background-color: ${theme.colors.purple};
-          color: ${theme.colors.white};
-          transform: translateX(100%);
-          transition: transform 0.3s;
-          justify-content: center;
-          flex-direction: column;
-          padding-bottom: 30px;
-          padding-right: 40px;
-          position: absolute;
-          padding-top: 30px;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 2;
           height: 100vh;
           display: flex;
-          bottom: 0;
-          right: 0;
-          top: 0;
+          padding-top: 30px;
+          position: absolute;
+          padding-right: 40px;
+          padding-bottom: 30px;
+          flex-direction: column;
+          justify-content: center;
+          transition: transform 0.3s;
+          transform: translateX(100%);
+          color: ${theme.colors.white};
+          background-color: ${theme.colors.purple};
+        }
+
+        .mobile-nav.open {
+          transform: unset;
+        }
+
+        .close-nav {
+          top: 5px;
+          border: 0;
+          right: 5px;
+          z-index: 100;
+          background: 0;
+          display: block;
+          cursor: pointer;
+          position: absolute;
+          transform: translateX(100%);
+          transition: transform 0.3s;
+        }
+
+        .close-nav.open {
+          animation-delay: 0.3s;
+          animation-name: rollIn;
+          animation-duration: 0.6s;
+          animation-fill-mode: forwards;
+        }
+
+        .mobile-nav ul {
+          padding-left: ${theme.spacing.small};
+        }
+
+        .mobile-nav li {
+          font-size: 20px;
+          list-style: none;
+          list-style-type: none;
+          vertical-align: middle;
+          padding: 5px 10px 5px 45px;
+          margin-bottom: ${theme.spacing.large};
+        }
+
+        .mobile-nav .about {
+          list-style: none;
+          background: url(${about.src}) no-repeat left center;
+        }
+
+        .mobile-nav .guides {
+          list-style: none;
+          background: url(${guides.src}) no-repeat left center;
+        }
+
+        .mobile-nav .faq {
+          list-style: none;
+          background: url(${faq.src}) no-repeat left center;
+        }
+
+        .mobile-nav .shop {
+          list-style: none;
+          background: url(${shop.src}) no-repeat left center;
+        }
+
+        .mobile-nav .contact {
+          list-style: none;
+          background: url(${contact.src}) no-repeat left center;
         }
 
         @media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (orientation: landscape) {
@@ -80,66 +156,10 @@ const MobileNav = () => {
           }
         }
 
-        .mobile-nav.open {
-          transform: unset;
-        }
-
-        .close-nav {
-          transition: transform 0.3s;
-          transform: translateX(100%);
-          position: absolute;
-          cursor: pointer;
-          display: block;
-          background: 0;
-          z-index: 100;
-          right: 5px;
-          border: 0;
-          top: 5px;
-        }
-
-        .close-nav.open {
-          animation-fill-mode: forwards;
-          animation-duration: 0.6s;
-          animation-name: rollIn;
-          animation-delay: 0.3s;
-        }
-
-        .mobile-nav ul {
-          padding-left: ${theme.spacing.small};
-        }
-
-        .mobile-nav li {
-          margin-bottom: ${theme.spacing.large};
-          padding: 5px 10px 5px 45px;
-          vertical-align: middle;
-          list-style-type: none;
-          list-style: none;
-          font-size: 20px;
-        }
-
-        .mobile-nav .about {
-          background: url(${about.src}) no-repeat left center;
-          list-style: none;
-        }
-
-        .mobile-nav .guides {
-          background: url(${guides.src}) no-repeat left center;
-          list-style: none;
-        }
-
-        .mobile-nav .faq {
-          background: url(${faq.src}) no-repeat left center;
-          list-style: none;
-        }
-
-        .mobile-nav .shop {
-          background: url(${shop.src}) no-repeat left center;
-          list-style: none;
-        }
-
-        .mobile-nav .contact {
-          background: url(${contact.src}) no-repeat left center;
-          list-style: none;
+        @media only screen and (min-width: 1024px) {
+          .mobile-nav-container {
+            display: none;
+          }
         }
 
         @keyframes rollIn {
