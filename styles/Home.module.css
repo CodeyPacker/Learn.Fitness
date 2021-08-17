@@ -1,0 +1,9 @@
+.constraint {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mainContent {
+  padding: 10px 15px;
+  position: relative;
+}

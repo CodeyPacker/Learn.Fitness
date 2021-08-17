@@ -1,0 +1,18 @@
+<svg id="Elements_Icon_Small_Copy_2" data-name="Elements/Icon/Small Copy 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Shape" d="M9.807,12.6A1.4,1.4,0,1,1,11.2,14,1.4,1.4,0,0,1,9.807,12.6Zm-7,0A1.4,1.4,0,1,1,4.2,14,1.4,1.4,0,0,1,2.807,12.6ZM4.2,10.5A1.4,1.4,0,0,1,2.8,9.1a1.351,1.351,0,0,1,.175-.672L3.92,6.713,1.4,1.4H0V0H2.289l.658,1.4H13.3a.7.7,0,0,1,.7.7.687.687,0,0,1-.085.337L11.41,6.979a1.393,1.393,0,0,1-1.225.722H4.97l-.63,1.14-.021.085a.173.173,0,0,0,.175.175H12.6v1.4Z" transform="translate(8 8)"/>
+    </clipPath>
+  </defs>
+  <g id="Icon">
+    <rect id="BoundingBox" width="30" height="30" fill="none"/>
+    <g id="Group_29" data-name="Group 29">
+      <path id="Shape-2" data-name="Shape" d="M9.807,12.6A1.4,1.4,0,1,1,11.2,14,1.4,1.4,0,0,1,9.807,12.6Zm-7,0A1.4,1.4,0,1,1,4.2,14,1.4,1.4,0,0,1,2.807,12.6ZM4.2,10.5A1.4,1.4,0,0,1,2.8,9.1a1.351,1.351,0,0,1,.175-.672L3.92,6.713,1.4,1.4H0V0H2.289l.658,1.4H13.3a.7.7,0,0,1,.7.7.687.687,0,0,1-.085.337L11.41,6.979a1.393,1.393,0,0,1-1.225.722H4.97l-.63,1.14-.021.085a.173.173,0,0,0,.175.175H12.6v1.4Z" transform="translate(8 8)"/>
+      <g id="Mask_Group_38" data-name="Mask Group 38" clip-path="url(#clip-path)">
+        <g id="Icon-Color">
+          <rect id="Swatch-NeonBlue" width="30" height="30" fill="#2cfef6"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

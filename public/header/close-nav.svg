@@ -1,0 +1,14 @@
+<svg id="Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="45" viewBox="0 0 45 45">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Combined_Shape" data-name="Combined Shape" d="M15.288,17.41,8.924,11.046,2.561,17.41A1.5,1.5,0,1,1,.439,15.288L6.8,8.924.439,2.561A1.5,1.5,0,0,1,2.561.439L8.924,6.8,15.288.439A1.5,1.5,0,1,1,17.41,2.561L11.046,8.924l6.364,6.364a1.5,1.5,0,1,1-2.121,2.121Z" transform="translate(13.726 12.226)" fill="#979797"/>
+    </clipPath>
+  </defs>
+  <rect id="BoundingBox" width="45" height="45" fill="none"/>
+  <path id="Combined_Shape-2" data-name="Combined Shape" d="M15.288,17.41,8.924,11.046,2.561,17.41A1.5,1.5,0,1,1,.439,15.288L6.8,8.924.439,2.561A1.5,1.5,0,0,1,2.561.439L8.924,6.8,15.288.439A1.5,1.5,0,1,1,17.41,2.561L11.046,8.924l6.364,6.364a1.5,1.5,0,1,1-2.121,2.121Z" transform="translate(13.726 12.226)" fill="#979797"/>
+  <g id="Icon-2" data-name="Icon" clip-path="url(#clip-path)">
+    <g id="Icon-Color" transform="translate(0 -1)">
+      <rect id="Swatch-BubbleGreen" width="45" height="45" fill="#41d3a2"/>
+    </g>
+  </g>
+</svg>

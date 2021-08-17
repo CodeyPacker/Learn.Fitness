@@ -1,3 +1,9 @@
+const desktopMax = 1440,
+  desktopMin = 1024,
+  mobileMax = 1023,
+  mobileMin = 320,
+  tabletMin = 520;
+
 const theme = {
   colors: {
     blue: "#1b0c69",
@@ -15,6 +21,19 @@ const theme = {
     gray: "#264450",
     lightGray: "#b9b9b9",
     white: "#ffffff",
+  },
+  breakpoints: {
+    desktopMin: `${desktopMin}px`,
+    mobileMax: `${mobileMax}px`,
+    mobileMin: `${mobileMin}px`,
+    tabletMin: `${tabletMin}px`,
+  },
+  spacing: {
+    xsmall: `${8}px`,
+    small: `${16}px`,
+    medium: `${24}px`,
+    large: `${32}px`,
+    xlarge: `${64}px`,
   },
 };
 
