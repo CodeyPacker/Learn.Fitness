@@ -53,7 +53,7 @@ const Header = () => {
           margin-left: ${theme.spacing.small};
         }
 
-        @media only screen and (max-width: ${theme.breakpoints.desktopMin}) {
+        @media only screen and (max-width: 1023px) {
           .desktop-nav {
             display: none;
           }
