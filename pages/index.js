@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Header from "../src/components/header/Header";
+import Hero from "../src/components/hero/Hero";
 import yellowBlobMobile from "../public/header/yellow-blob-mobile.svg";
 import yellowBlob from "../public/header/yellow-blob.svg";
 import theme from "../theme";
@@ -24,21 +25,8 @@ export default function Home() {
           <Image src={yellowBlob} alt="" />
         </div>
         <Header />
+        <Hero />
       </main>
-
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
-
       <style jsx>{`
         header {
           justify-content: space-between;
@@ -48,8 +36,8 @@ export default function Home() {
         .yellow-blob-mobile {
           z-index: -1;
           position: absolute;
-          top: -136px;
-          left: -80px;
+          top: -180px;
+          left: -140px;
         }
 
         .yellow-blob {
@@ -85,8 +73,8 @@ export default function Home() {
           .yellow-blob {
             display: block;
             position: absolute;
-            top: -300px;
-            left: -200px;
+            top: -346px;
+            left: -283px;
           }
         }
 
@@ -99,6 +87,7 @@ export default function Home() {
         @media only screen and (min-width: ${theme.breakpoints.desktopMax}) {
           .yellow-blob {
             left: 100px;
+            top: -245px;
           }
         }
 
