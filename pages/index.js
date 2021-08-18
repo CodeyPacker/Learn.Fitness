@@ -17,6 +17,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="main-content">
+        <div className="yellow-blob-mobile">
+          <Image src={yellowBlobMobile} alt="" />
+        </div>
+        <div className="yellow-blob">
+          <Image src={yellowBlob} alt="" />
+        </div>
         <Header />
       </main>
 
@@ -39,6 +45,17 @@ export default function Home() {
           display: flex;
         }
 
+        .yellow-blob-mobile {
+          z-index: -1;
+          position: absolute;
+          top: -136px;
+          left: -80px;
+        }
+
+        .yellow-blob {
+          display: none;
+        }
+
         .nav {
           cursor: pointer;
           background: 0;
@@ -58,34 +75,36 @@ export default function Home() {
           padding: 10px 15px;
           min-height: 100vh;
           width: 100vw;
-          background-image: url(${yellowBlobMobile.src});
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-position: -84px -164px;
         }
 
         @media only screen and (min-width: ${theme.breakpoints.tabletMin}) {
-          .main-content {
-            background-image: url(${yellowBlob.src});
-            background-position: -222px -278px;
+          .yellow-blob-mobile {
+            display: none;
           }
-        }
 
-        @media only screen and (min-width: ${theme.breakpoints.desktopMin}) {
-          .main-content {
-            background-position: -222px -278px;
-          }
-        }
-
-        @media only screen and (min-width: ${theme.breakpoints.desktopMax}) {
-          .main-content {
-            background-position: 10px -333px;
+          .yellow-blob {
+            display: block;
+            position: absolute;
+            top: -300px;
+            left: -200px;
           }
         }
 
         @media only screen and (max-width: ${theme.breakpoints.desktopMin}) {
           .desktop-nav {
             display: none;
+          }
+        }
+
+        @media only screen and (min-width: ${theme.breakpoints.desktopMax}) {
+          .yellow-blob {
+            left: 100px;
+          }
+        }
+
+        @media only screen and (min-width: 2300px) {
+          .yellow-blob {
+            left: 400px;
           }
         }
       `}</style>
