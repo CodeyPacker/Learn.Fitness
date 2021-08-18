@@ -2,7 +2,8 @@ const desktopMax = 1440,
   desktopMin = 1024,
   mobileMax = 1023,
   mobileMin = 320,
-  tabletMin = 520;
+  tabletMin = 520,
+  tabletMax = 768;
 
 const theme = {
   colors: {
@@ -28,6 +29,7 @@ const theme = {
     mobileMax: `${mobileMax}px`,
     mobileMin: `${mobileMin}px`,
     tabletMin: `${tabletMin}px`,
+    tabletMax: `${tabletMax}px`,
   },
   spacing: {
     xsmall: `${8}px`,

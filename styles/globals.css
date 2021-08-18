@@ -6,8 +6,19 @@ body {
   padding: 0;
   margin: 0;
   color: #264450;
-  font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+a,
+button,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
 }
 
 a {
@@ -17,4 +28,26 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+p {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 16px;
+  color: #264450;
+}
+
+h1 {
+  font-size: 22px;
+  line-height: 32px;
+  color: #1b0c69;
+  z-index: 3;
+  margin-bottom: 8px;
+}
+
+@media only screen and (min-width: 1025px) {
+  h1 {
+    font-size: 34px;
+    line-height: 42px;
+  }
 }

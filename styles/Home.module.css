@@ -2,3 +2,17 @@
   max-width: 900px;
   margin: 0 auto;
 }
+
+.button {
+  display: inline-block;
+  background-color: #41d3a2;
+  color: #1b0c69;
+  padding: 8px 20px;
+  transition: color 0.3s;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.button:hover {
+  background-color: #36f3b4;
+}
