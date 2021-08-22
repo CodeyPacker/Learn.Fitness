@@ -4,11 +4,12 @@ import Button from "../global/Button";
 import styles from "../../../styles/Home.module.css";
 import deadlifter from "../../../public/hero/deadlifter.svg";
 import twoBlobs from "../../../public/hero/two-blobs.svg";
-
+import Sprinkles from "./Sprinkles";
 const Hero = () => {
   return (
     <section>
       <div className={`hero ${styles.constraint}`}>
+        <Sprinkles />
         <div className="content">
           <h1 className="heading">
             Fitness made <span className="simple">simple</span>.
@@ -30,6 +31,7 @@ const Hero = () => {
       <style jsx>{`
         .hero {
           padding: 30px 0px;
+          position: relative;
         }
 
         .heading {
