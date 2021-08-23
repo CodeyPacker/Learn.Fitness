@@ -80,14 +80,14 @@ const MobileNav = () => {
           height: 100vh;
           position: absolute;
           background-color: black;
-          z-index: 9;
+          z-index: 10;
         }
 
         .mobile-nav {
           top: 0;
           right: 0;
           bottom: 0;
-          z-index: 10;
+          z-index: 11;
           height: 100vh;
           display: flex;
           padding-top: 80px;

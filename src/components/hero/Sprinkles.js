@@ -32,6 +32,7 @@ const Sprinkles = () => {
           width: 15px;
           height: 15px;
           transform-style: preserve-3d;
+          z-index: 10;
         }
 
         .sprinkle-1 {
@@ -151,7 +152,7 @@ const Sprinkles = () => {
           }
 
           .sprinkle-9 {
-            bottom: 0%;
+            bottom: 5%;
             left: 10%;
             background: radial-gradient(
               circle,
@@ -221,8 +222,8 @@ const Sprinkles = () => {
           }
 
           .sprinkle-15 {
-            top: 25%;
-            right: -30%;
+            top: 50%;
+            right: -23%;
             background: radial-gradient(
               circle,
               transparent 25%,

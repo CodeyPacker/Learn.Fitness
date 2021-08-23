@@ -17,7 +17,9 @@ const Hero = () => {
           <p className="subheading">
             Useful fitness information from certified fitness professionals.
           </p>
-          <Button text="View Guides" href="#guides" />
+          <div className="cta">
+            <Button text="View Guides" href="#guides" />
+          </div>
         </div>
         <div className="images">
           <div className="two-blobs">
@@ -30,8 +32,9 @@ const Hero = () => {
       </div>
       <style jsx>{`
         .hero {
-          padding: 30px 0px;
+          padding: 30px 15px;
           position: relative;
+          z-index: -1;
         }
 
         .heading {
@@ -51,13 +54,23 @@ const Hero = () => {
         .images {
           position: relative;
           margin-top: ${theme.spacing.large};
+          pointer-events: none;
+          z-index: 1;
         }
 
         .two-blobs {
           position: absolute;
           transform: translateX(-30px);
           width: 550px;
-          top: -50px;
+          top: -110px;
+        }
+
+        .content {
+          z-index: 2;
+        }
+
+        .cta {
+          width: fit-content;
         }
 
         @media only screen and (min-width: ${theme.breakpoints.tabletMin}) {
@@ -70,7 +83,7 @@ const Hero = () => {
 
           .images {
             position: relative;
-            z-index: -1;
+            z-index: 1;
             max-width: 400px;
           }
 

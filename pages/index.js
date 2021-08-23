@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "../src/components/header/Header";
 import Hero from "../src/components/hero/Hero";
+import FeaturedGuides from "../src/components/featured-guides/FeaturedGuides";
 import yellowBlobMobile from "../public/header/yellow-blob-mobile.svg";
 import yellowBlob from "../public/header/yellow-blob.svg";
 import theme from "../theme";
@@ -26,6 +27,7 @@ export default function Home() {
         </div>
         <Header />
         <Hero />
+        <FeaturedGuides/>
       </main>
       <style jsx>{`
         header {
@@ -60,7 +62,6 @@ export default function Home() {
         }
 
         .main-content {
-          padding: 10px 15px;
           min-height: 100vh;
           width: 100vw;
         }

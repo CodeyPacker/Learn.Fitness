@@ -36,6 +36,8 @@ const Header = () => {
         header {
           justify-content: space-between;
           display: flex;
+          z-index: 2;
+          position: relative;
         }
 
         .nav {

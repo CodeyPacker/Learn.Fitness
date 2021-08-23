@@ -1,12 +1,16 @@
 html,
 body {
   position: relative;
-  overflow: hidden;
   min-height: 100vh;
   padding: 0;
   margin: 0;
   color: #264450;
   font-family: "Open Sans", sans-serif;
+}
+
+.main-content {
+  padding: 0;
+  overflow: hidden;
 }
 
 a,
